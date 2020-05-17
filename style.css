@@ -1,32 +1,33 @@
+/* FPT POLYTECHNICH - HUỲNH VĂN NAM - NSEVEN404 */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Muli", sans-serif;
     color: rgb(51, 51, 51);
-  }
+}
 
-  button {
+button {
     font-family: "Muli", sans-serif;
-  }
+}
 
-  path,
-  i,
-  svg {
+path,
+i,
+svg {
     pointer-events: none;
-  }
+}
 
-  .colors {
+.colors {
     min-height: 80vh;
     display: flex;
     color: rgb(212, 212, 212);
-  }
+}
 
-  .color {
+.color {
     height: 80vh;
     display: flex;
     flex: 1;
@@ -35,14 +36,14 @@
     justify-content: space-evenly;
     position: relative;
     overflow: hidden;
-  }
+}
 
-  .color h2 {
+.color h2 {
     font-size: 2rem;
     cursor: pointer;
-  }
+}
 
-  .sliders {
+.sliders {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -57,17 +58,17 @@
     /* We are adding an adjustemnt class */
     transform: translateY(100px);
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  .sliders.active {
+.sliders.active {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: all;
-  }
+}
 
-  .sliders button,
-  .close-save,
-  .close-library {
+.sliders button,
+.close-save,
+.close-library {
     position: absolute;
     top: 0;
     right: 0;
@@ -79,21 +80,21 @@
     color: white;
     cursor: pointer;
     font-weight: bold;
-  }
+}
 
-  .controls {
+.controls {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .panel {
+.panel {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 20vh;
-  }
+}
 
-  .panel button {
+.panel button {
     font-size: 1.2rem;
     margin: 1rem;
     padding: 1rem 2rem;
@@ -102,42 +103,44 @@
     color: white;
     cursor: pointer;
     border-radius: 1rem;
-  }
+}
 
-  .panel p {font-size: 1.2rem;}
+.panel p {
+    font-size: 1.2rem;
+}
 
-  .library-panel,
-  .generate-panel,
-  .save-panel {
+.library-panel,
+.generate-panel,
+.save-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .adjust,
-  .lock {
+}
+
+.adjust,
+.lock {
     font-size: 2rem;
     border: none;
     background: none;
     cursor: pointer;
     margin: 2rem 0rem;
-  }
-  
-  /* Slider Stuff */
-  input[type="range"] {
+}
+
+
+/* Slider Stuff */
+
+input[type="range"] {
     -webkit-appearance: none;
     margin: 1rem 0rem;
     width: 100%;
     position: relative;
     border-radius: 1rem;
     cursor: pointer;
-  }
-  
-    
+}
 
-  .copy-container,
-  .save-container,
-  .library-container {
+.copy-container,
+.save-container,
+.library-container {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -150,11 +153,11 @@
     align-items: center;
     opacity: 0;
     pointer-events: none;
-  }
+}
 
-  .copy-popup,
-  .save-popup,
-  .library-popup {
+.copy-popup,
+.save-popup,
+.library-popup {
     background: white;
     display: flex;
     flex-direction: column;
@@ -165,41 +168,41 @@
     transform: translateY(-2rem);
     min-width: 30%;
     min-height: 30vh;
-  }
+}
 
-  .copy-popup h4,
-  .save-popup h4,
-  .library-popup h4 {
+.copy-popup h4,
+.save-popup h4,
+.library-popup h4 {
     font-size: 2rem;
     padding: 2rem;
-  }
+}
 
-  .copy-container.active,
-  .save-container.active,
-  .library-container.active {
+.copy-container.active,
+.save-container.active,
+.library-container.active {
     opacity: 1;
     pointer-events: all;
-  }
+}
 
-  .copy-popup.active,
-  .save-popup.active,
-  .library-popup.active {
+.copy-popup.active,
+.save-popup.active,
+.library-popup.active {
     transform: translateY(0rem);
-  }
-  
-  .save-name {
+}
+
+.save-name {
     font-size: 1.5rem;
     padding: 1rem;
-  }
+}
 
-  .close-save,
-  .close-library {
+.close-save,
+.close-library {
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     padding: 0.5rem;
-  }
+}
 
-  .submit-save {
+.submit-save {
     margin: 2rem;
     padding: 1rem 3rem;
     background: rgb(60, 60, 92);
@@ -207,38 +210,39 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-  }
-  
-  .library-popup {
+}
+
+.library-popup {
     min-width: 40%;
     padding: 1rem;
     justify-content: flex-start;
     overflow-y: scroll;
     max-height: 50vh;
-  }
+}
 
-  .custom-palette {
+.custom-palette {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
     padding: 2rem;
-  }
+}
 
-  .small-preview {
+.small-preview {
     display: flex;
     flex: 1;
-  }
-  .custom-palette h4 {
+}
+
+.custom-palette h4 {
     flex: 1;
-  }
-  
-  .small-preview div {
+}
+
+.small-preview div {
     height: 5rem;
     flex: 1;
-  }
+}
 
-  .pick-palette-btn {
+.pick-palette-btn {
     height: 5rem;
     border: none;
     padding: 1rem;
@@ -246,7 +250,4 @@
     font-size: 1.2rem;
     background: rgb(41, 41, 41);
     color: white;
-  }
-
-
-  
+}
